@@ -2,6 +2,9 @@
  * This file is just a silly example to show everything working in the browser.
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
+
+import { registerImage } from "./lazy";
+
 const maximum = 123;
 const minimum = 1;
 
@@ -31,6 +34,7 @@ const addButton = document.querySelector('button');
 const action = () => {
     const newImage = createImageNode();
     mountNode.append(newImage);
+    registerImage(newImage)
 }
 
 addButton.addEventListener('click', action)
